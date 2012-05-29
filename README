@@ -1,39 +1,25 @@
-	Fsec - Find bad Sectors on disk
-        Copyright (C) 2012  Raja Jamwal - linux1@zoho.com
+Fsec - Find bad Sectors on disk
+Copyright (C) 2012  Raja Jamwal - linux1@zoho.com
 
- 		This program is free software; you can redistribute it and/or modify
- 		it under the terms of the GNU General Public License as published by
- 		the Free Software Foundation; either version 2 of the License, or
- 	        (at your option) any later version.
 
-	       This program is distributed in the hope that it will be useful,
-               but WITHOUT ANY WARRANTY; without even the implied warranty of
-               MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-               GNU General Public License for more details.
-
-               You should have received a copy of the GNU General Public License
-               along with this program; if not, write to the Free Software
-               Foundation, Inc., 59 Temple Place - Suite 330,
-               Boston, MA 02111-1307, USA.
-
-	Compilation instructions:
+Compilation instructions:
 	
-		gcc main.c -o fsec
+ gcc main.c -o fsec
 
-	Program parameters:
+Program parameters:
 		
-		./fsec --block-size <bs> --skip <sp>
+	./fsec --block-size <bs> --skip <sp>
 
-		<bs> : Block size, number of bytes to read in one go, this also determines our block unit
-		       Bad sectors will be displayed in block unit, i.e 3 block or 5000 block
+<bs> : Block size, number of bytes to read in one go, this also determines our block unit
+Bad sectors will be displayed in block unit, i.e 3 block or 5000 block
 
-		<sp> : Skip number of block (not bytes), this is done when a bad block is encountered,
-		       Disk may or may not seek further once a bad block is encountered,
-		       In such a scenario <sp> should be atleast 1 or any relavant value 
+<sp> : Skip number of block (not bytes), this is done when a bad block is encountered,
+Disk may or may not seek further once a bad block is encountered,
+In such a scenario <sp> should be atleast 1 or any relavant value 
 	
-	NOTE : status shown is <current byte>/<total byte>, the values may or may not be wrong,
-	       depends on the condition of failing disk
+NOTE : status shown is <current byte>/<total byte>, the values may or may not be wrong,
+depends on the condition of failing disk
 
-	In any case, the values shown in block units are final & should be considered 
+In any case, the values shown in block units are final & should be considered 
 
 
